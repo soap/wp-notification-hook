@@ -1,0 +1,41 @@
+{
+	"name": "notification/slug-namexx",
+	"type": "wordpress-plugin",
+	"scripts": {
+		"phpcbf": "phpcbf",
+		"phpcs": "phpcs",
+		"phpcompat": "phpcs --standard=PHPCompatibility --runtime-set testVersion 7.0 notification-slug-namexx.php load.php uninstall.php src/ resources/templates/",
+		"phplint": "parallel-lint --exclude node_modules --exclude vendor --exclude resources/css --exclude resources/js ."
+	},
+	"autoload": {
+		"psr-4": {
+			"BracketSpace\\Notification\\XXNAMESPACEXX\\": "src/"
+		}
+	},
+	"require": {
+		"php": "^7.0",
+		"micropackage/ajax": "^1.0",
+		"micropackage/dochooks": "1.0.2",
+		"micropackage/filesystem": "^1.1",
+		"micropackage/internationalization": "^1.0",
+		"micropackage/requirements": "^1.0",
+		"micropackage/templates": "^1.1",
+		"typisttech/imposter-plugin": "^0.6.2"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+		"jakub-onderka/php-parallel-lint": "^1.0",
+		"phpcompatibility/php-compatibility": "^9.3",
+		"wp-coding-standards/wpcs": "^2.0"
+	},
+	"extra": {
+		"imposter": {
+			"namespace": "BracketSpace\\Notification\\XXNAMESPACEXX\\Vendor"
+		}
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"preferred-install": "dist",
+		"sort-packages": true
+	}
+}
